@@ -1,7 +1,7 @@
 class Node:
     def __init__(self,data):
-        self.__data = data
-        self.priv = None
+        self.data = data
+        self.next = None
 
 
 class Stack:
@@ -38,4 +38,21 @@ class Stack:
             __current = __current.next
         print("Null")
         return
+    def get_size(self):
+        print(self.__count)
+    def get_front(self):
+        print(self.__front.data)
+    def get_back(self):
+        print(self.__back.data)
 
+stack = Stack()
+stack.display()
+stack.push(20)
+stack.push(30)
+stack.push(10)
+stack.push(40)
+stack.push(70)
+stack.display()
+stack.get_front()
+stack.get_back()
+stack.get_size()
